@@ -14,18 +14,29 @@
 //   });
 // });
 // #########################################
-// function findWin (record){
-//     return record.result === "W";
-// }
+function findWin (record){
+     return record.result === "W";
+ }
 // const sadReality =  [ { result: "N/A" }, { result: "N/A" }, { result: "N/A" } ]
 function superbowlWin(record) {
     // const result = record.find(findWin)
-    return record.find(record => record.result === "W");
-    // if (result === true){
-    //     return record.year;
-    // }
-    // else {
-    //     return undefined;
-    // }
+    const result = record.find(findWin); //=> {year: 1990, result: "W"} || undefined
+    if (result){
+        return result.year;
+    }
+    else {
+        return undefined;
+    }
 }
+
+// function myFind(arr, callback){
+//     for(const element of arr){
+//         const result = callback(element);
+//         if(result){
+//             return element
+//         }
+//     }
+//     return undefined
+// }
+// myFind(record, (record) => record.result ==="W")
 // const return = record.find(record => record.result === "W");
