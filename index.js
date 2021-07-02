@@ -21,12 +21,14 @@ function findWin (record){
 function superbowlWin(record) {
     // const result = record.find(findWin)
     const result = record.find(findWin); //=> {year: 1990, result: "W"} || undefined
+    console.log(record)
     if (result){
         return result.year;
     }
     else {
         return undefined;
     }
+    
 }
 
 // function myFind(arr, callback){
